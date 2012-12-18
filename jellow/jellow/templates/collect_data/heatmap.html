@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
+    </head>
+    <body>
+        <div id="map_canvas" style="width:500px;height:500px;"></div>
+    </body>
+        <script type="text/javascript">
+            /* Data points defined as an array of LatLng objects */
+            var heatmapData = [
+                {% for coord in coordinates %}
+                  new google.maps.LatLng({{coord.longitude}}, {{coord.latitude}}),
+                {% endfor %}
+            ];
+
+            var sanFrancisco = new google.maps.LatLng(37.774546, -122.433523);
+
+            map = new google.maps.Map(document.getElementById('map_canvas'), {
+              center: sanFrancisco,
+              zoom: 13,
+              mapTypeId: google.maps.MapTypeId.SATELLITE
+            });
+
+            var heatmap = new google.maps.visualization.HeatmapLayer({
+              data: heatmapData
+            });
+            heatmap.setMap(map);
+        </script>
+</html>
