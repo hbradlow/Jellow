@@ -44,6 +44,7 @@
             "Support/Evidence":"1",
             "Readability":"1",
             "Appropriatness of tags":"1",
+            "comments":"",
         };
 
         $("td.option").click(function(){
@@ -53,6 +54,11 @@
                 $(this).css({"background":"white"});
             });
             $(this).css({"background":"grey"});
+        });
+
+        $("#submit_rating").click(function(){
+                fields["comments"] = $("#grading_comments").val();
+                $.post("{% url submit_grade %}", fields );
         });
     });
 </script>
@@ -108,8 +114,8 @@
             </tbody>
         </table>
         <br />
-        <textarea style="float:left;clear:both;"></textarea>
+        <textarea style="float:left;clear:both;" id="grading_comments"></textarea>
         <br />
-        <a class="btn" id="submit_rating" style="float:left;clear:both;">Submit</a>
+        <a class="btn" id="submit_rating" style="float:left;clear:both;" href="#">Submit</a>
     </div>
 </div>

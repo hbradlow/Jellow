@@ -42,6 +42,7 @@ class Rating(models.Model):
     support = models.CharField(max_length=10,choices=rating_choices)
     readability = models.CharField(max_length=10,choices=rating_choices)
     tags = models.CharField(max_length=10,choices=rating_choices)
+    comments = models.TextField()
 admin.site.register(Rating)
 
 
