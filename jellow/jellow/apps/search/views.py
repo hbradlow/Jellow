@@ -10,5 +10,6 @@ def home(request):
     if "q" in request.GET:
         sqs = SearchQuerySet().filter(content_auto=request.GET.get('q', ''))
         paragraphs = [a.object for a in sqs[0:10]]
-    return render_to_response("search/home.html",{"paragraphs":paragraphs})
+    return render_to_response("search/home.html",{"paragraphs":paragraphs},context_instance=RequestContext(request))
+
 

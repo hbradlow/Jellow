@@ -4,6 +4,8 @@
 	<div class="list_of_paragraphs search_news">
 		{% for paragraph in paragraphs %} 
 			<div class="grid" data-size="1">
+                <img src="{{user.get_profile.image.url}}"></img>
+                {{user.get_profile.location}}
 				{{paragraph.text|striptags}}
 				<br>
 				<br>

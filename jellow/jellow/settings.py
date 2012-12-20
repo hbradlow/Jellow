@@ -172,7 +172,7 @@ HAYSTACK_CONNECTIONS = {
 }
 
 #profile
-AUTH_PROFILE_MODULE = "profiles.models.UserProfile"
+AUTH_PROFILE_MODULE = "profiles.UserProfile"
 
 #debug toolbar
 INTERNAL_IPS = ('127.0.0.1',)
