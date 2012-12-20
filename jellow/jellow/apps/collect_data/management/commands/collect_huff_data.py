@@ -3,20 +3,18 @@ import requests
 import json
 import BeautifulSoup
 from collect_data.models import *
+import warnings
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
+        warnings.simplefilter("ignore")
         limit = 50
-        for i in range(30):
+        for i in range(100):
+            print "Starting article " + str(i*limit)
             base_url = "http://huffpo.enterpriseapi.daylife.com/articles/syria?format=json&limit=" + str(limit*i + limit) + "&offset=" + str(limit*i)
             objects = json.loads(requests.get(base_url).text)
+
             for o in objects['response']['payload']['article']:
-                article = Article.objects.create(pub_date=o['timestamp']) 
-                url = o['url'] 
-                text = requests.get(url).text 
-                soup = BeautifulSoup.BeautifulSoup(text)
-                try:
-                    for paragraph in soup.find("div",{ "class" : "articleBody"}).findAll("p"):
-                        Paragraph.objects.create(article=article,text=str(paragraph))
-                except AttributeError:
-                    article.delete()
+                article = Article.objects.create(pub_date=o['timestamp'],raw=json.dumps(o)) 
+                article.process_raw()
+                article.save()
