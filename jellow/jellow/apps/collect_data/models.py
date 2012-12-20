@@ -38,6 +38,7 @@ rating_choices = (
     ("5","5"),
 )
 class Rating(models.Model):
+    article = models.ForeignKey(Article,null=True)
     organization = models.CharField(max_length=10,choices=rating_choices)
     support = models.CharField(max_length=10,choices=rating_choices)
     readability = models.CharField(max_length=10,choices=rating_choices)

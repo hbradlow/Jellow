@@ -2,6 +2,7 @@ from collect_data.models import *
 from django.shortcuts import *
 
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import get_object_or_404
 
 def heatmap(request):
     tweets = Tweet.objects.all()
@@ -15,6 +16,7 @@ def heatmap(request):
 def submit_grade(request):
     if request.method=="POST":
         r = Rating()
+        r.article = get_object_or_404(Article,pk=request.POST["article_pk"])
         r.organization = request.POST["Organization"]
         r.support = request.POST["Support/Evidence"]
         r.readability = request.POST["Readability"]
