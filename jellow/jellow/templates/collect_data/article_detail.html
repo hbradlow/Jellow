@@ -1,0 +1,13 @@
+{% extends "collect_data/base.html" %}
+
+{% block body %}
+    <div class="row">
+        <h3>{{object.headline}}</h3>
+        {% for paragraph in object.paragraph_set.all reversed %}
+            {% if not forloop.first %}<hr />{% endif %}
+            <div class="row">
+                {{paragraph.text|striptags}}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
