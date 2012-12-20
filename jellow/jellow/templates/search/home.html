@@ -6,8 +6,10 @@
             <hr />
         {% endif %}
         <div class="row">
-            <h3>{{paragraph.article.headline}}</h3>
-            {{paragraph.text|striptags}}
+            <a href="{% url article_detail paragraph.article.pk %}">
+                <h3>{{paragraph.article.headline}}</h3>
+                {{paragraph.text|striptags}}
+            </a>
         </div>
     {% endfor %}
 {% endblock %}
