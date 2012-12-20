@@ -1,0 +1,115 @@
+<style>
+    .slideout_panel{
+        height:400px;
+        width:700px;
+        position:fixed;
+        top:100px;
+        right:-702px;
+        background:white;
+        border:1px solid grey;
+    }
+    .slideout_panel .content{
+        padding:20px;
+    }
+    .slideout_panel .tab{
+        position:absolute;
+        top:40px;
+        height:20px;
+        left:-52px;
+        background:grey;
+        margin:0px;
+        font-size:20px;
+        padding:10px;
+        -webkit-transform:rotate(-90deg);
+        -moz-transform:rotate(-90deg);
+        -o-transform:rotate(-90deg);
+        /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+        -ms-transform:rotate(-90deg);
+    }
+    .slideout_panel td.option:hover{
+        cursor:pointer;
+        background:grey;
+    }
+</style>
+<script type="text/javascript">
+    var fields;
+    $(function(){
+        $(".slideout_panel").hover(function(){
+            $(this).stop().animate({"right":"-1px"});
+        },function(){
+            $(this).stop().animate({"right":"-702px"});
+        });
+        fields = {
+            "Organization":"1",
+            "Support/Evidence":"1",
+            "Readability":"1",
+            "Appropriatness of tags":"1",
+        };
+
+        $("td.option").click(function(){
+            var current = $(this);
+            fields[$($(this).parent().children()[0]).html()] = $(this).attr("val");
+            $(this).parent().children().each(function(index,td){
+                $(this).css({"background":"white"});
+            });
+            $(this).css({"background":"grey"});
+        });
+    });
+</script>
+<div class="slideout_panel">
+    <div class="tab">
+        Rate
+    </div>
+    <div class="content">
+        <table class="">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Organization</td>
+                    <td class="option" val="1">Needs to be good</td>
+                    <td class="option" val="2">Needs to be good</td>
+                    <td class="option" val="3">Needs to be good</td>
+                    <td class="option" val="4">Needs to be good</td>
+                    <td class="option" val="5">Needs to be good</td>
+                </tr>
+                <tr>
+                    <td>Support/Evidence</td>
+                    <td class="option" val="1">Needs to be good</td>
+                    <td class="option" val="2">Needs to be good</td>
+                    <td class="option" val="3">Needs to be good</td>
+                    <td class="option" val="4">Needs to be good</td>
+                    <td class="option" val="5">Needs to be good</td>
+                </tr>
+                <tr>
+                    <td>Readability</td>
+                    <td class="option" val="1">Needs to be good</td>
+                    <td class="option" val="2">Needs to be good</td>
+                    <td class="option" val="3">Needs to be good</td>
+                    <td class="option" val="4">Needs to be good</td>
+                    <td class="option" val="5">Needs to be good</td>
+                </tr>
+                <tr>
+                    <td>Appropriatness of tags</td>
+                    <td class="option" val="1">Needs to be good</td>
+                    <td class="option" val="2">Needs to be good</td>
+                    <td class="option" val="3">Needs to be good</td>
+                    <td class="option" val="4">Needs to be good</td>
+                    <td class="option" val="5">Needs to be good</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <textarea style="float:left;clear:both;"></textarea>
+        <br />
+        <a class="btn" id="submit_rating" style="float:left;clear:both;">Submit</a>
+    </div>
+</div>

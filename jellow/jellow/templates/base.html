@@ -13,7 +13,6 @@
         {% block style_base %}
             <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
             <link href="{% static "bootstrap/css/bootstrap-responsive.css" %}" rel="stylesheet">
-            <link href="{% static "css/base.css" %}" rel="stylesheet">
             {% block extra_style %}{% endblock %}
         {% endblock %}
 
@@ -30,7 +29,6 @@
             <script src="{% static "jquery.min.js" %}"></script>
             <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
             <script src="{% static "bootstrap/js/bootstrap-typeahead.js" %}"></script>
-            <script src="{% static "js/csrf_fix.js" %}"></script>
             <script type="text/javascript">
                 var _gaq = _gaq || [];
                 _gaq.push(['_setAccount', 'UA-34356457-1']);
