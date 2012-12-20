@@ -3,10 +3,21 @@ from django.contrib import admin
 from django_extensions.db.fields import *
 import json
 
+class Article(models.Model):
+    pub_date = models.DateTimeField()
+admin.site.register(Article)
+class Paragraph(models.Model):
+    article = models.ForeignKey(Article)
+    text = models.TextField()
+admin.site.register(Paragraph)
+
+
+
+
 class Tweet(models.Model):
     text = models.TextField()
     raw = models.TextField()
-    created_at = CreationDateTimeField()
+    created_at = CreationDateTimeField(null=True)
     def process_raw(self):
         obj = json.loads(self.raw)
         self.text = obj['text']
