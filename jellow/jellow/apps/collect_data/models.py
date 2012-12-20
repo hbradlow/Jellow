@@ -30,6 +30,22 @@ class Paragraph(models.Model):
     text = models.TextField()
 admin.site.register(Paragraph)
 
+rating_choices = (
+    ("1","1"),
+    ("2","2"),
+    ("3","3"),
+    ("4","4"),
+    ("5","5"),
+)
+class Rating(models.Model):
+    article = models.ForeignKey(Article,null=True)
+    organization = models.CharField(max_length=10,choices=rating_choices)
+    support = models.CharField(max_length=10,choices=rating_choices)
+    readability = models.CharField(max_length=10,choices=rating_choices)
+    tags = models.CharField(max_length=10,choices=rating_choices)
+    comments = models.TextField()
+admin.site.register(Rating)
+
 
 
 

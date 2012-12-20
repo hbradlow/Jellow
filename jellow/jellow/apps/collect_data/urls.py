@@ -5,4 +5,5 @@ from collect_data.models import *
 urlpatterns = patterns('collect_data.views',
      url(r'^heatmap/$', "heatmap"),
      url(r'^article/(?P<pk>[-_\w\d]+)/$', DetailView.as_view(model=Article), name='article_detail'),
+     url(r'^submit_grade/$', "submit_grade", name="submit_grade"),
 )
