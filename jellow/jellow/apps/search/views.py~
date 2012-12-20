@@ -1,20 +1,17 @@
 from collect_data.models import Tweet
 from django.shortcuts import *
+<<<<<<< HEAD
 from search.models import Article
+=======
+from django.shortcuts import get_object_or_404
+>>>>>>> d52a3761460203adf4995c7679ff0e12649f61a2
 
 from haystack.query import SearchQuerySet
 
 def home(request):
-<<<<<<< HEAD
-    return render_to_response("search/home.html")
-def search(request):
-    articles = Article.objects.filter(Name__icontains=request.GET["q"])
-    print articles
-    return render_to_response("search/home.html",{"articles_list": articles})
-=======
     paragraphs = []
     if "q" in request.GET:
         sqs = SearchQuerySet().filter(content_auto=request.GET.get('q', ''))
         paragraphs = [a.object for a in sqs[0:10]]
     return render_to_response("search/home.html",{"paragraphs":paragraphs})
->>>>>>> ccf4ba1e8cad6f66552afbacbf0611dbcdfcb0bc
+

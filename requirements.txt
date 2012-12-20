@@ -1,7 +1,12 @@
+BeautifulSoup==3.2.1
 Django==1.4.3
 South==0.7.6
+argparse==1.2.1
 dj-database-url==0.2.1
 django-extensions==1.0.2
+git+git://github.com/toastdriven/django-haystack.git
 psycopg2==2.4.6
+python-ptrace==0.6.4
+-e git+git@github.com:kennethreitz/requests.git@0769ee3b6dce489733dd34e54072395d9e92e4da#egg=requests-dev
 tweepy==1.12
 wsgiref==0.1.2

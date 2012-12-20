@@ -1,6 +1,7 @@
 from collect_data.models import Tweet
 from django.shortcuts import *
-from search.models import Article
+from django.shortcuts import get_object_or_404
+
 
 from haystack.query import SearchQuerySet
 
