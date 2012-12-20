@@ -1,13 +1,11 @@
 {% extends "search/base.html" %}
 
 {% block body %}
+<div class="span8">
+
 {% for article in articles_list %}
-   
-   <div class="span8 article">
    <li>{{article.Name}}</li>
    <li>{{article.Content}}</li>
-   </div>
-
 {% endfor %}
 </div>
 {% endblock %}
