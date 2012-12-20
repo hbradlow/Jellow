@@ -1,4 +1,8 @@
-<form class="navbar-search pull-left" action="{% url home%}" method="get">
+<<<<<<< HEAD
+<form class="navbar-search pull-left" action="{% url search %}" method="get">
+=======
+<form class="navbar-search pull-left" action="{% url home %}" method="get">
+>>>>>>> ccf4ba1e8cad6f66552afbacbf0611dbcdfcb0bc
     {% csrf_token %}
     <input name="q" type="text" placeholder="Search..."  class="search-query typeahead" id="search_main" autocomplete="off" />
 </form>

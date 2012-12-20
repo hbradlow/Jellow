@@ -1,13 +1,13 @@
 {% extends "search/base.html" %}
 
 {% block body %}
-{% for article in articles_list %}
-   
-   <div class="span8 article">
-   <li>{{article.Name}}</li>
-   <li>{{article.Content}}</li>
-   </div>
-
-{% endfor %}
-</div>
+    {% for paragraph in paragraphs %}
+        {% if not forloop.first %}
+            <hr />
+        {% endif %}
+        <div class="row">
+            <h3>{{paragraph.article.headline}}</h3>
+            {{paragraph.text|striptags}}
+        </div>
+    {% endfor %}
 {% endblock %}

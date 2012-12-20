@@ -2,11 +2,41 @@ from django.db import models
 from django.contrib import admin
 from django_extensions.db.fields import *
 import json
+import BeautifulSoup
+import requests
+
+class Article(models.Model):
+    pub_date = models.DateTimeField()
+    raw = models.TextField()
+    headline = models.CharField(max_length=500)
+    def create_paragraphs(self,o):
+        url = o['url'] 
+        text = requests.get(url).text 
+        soup = BeautifulSoup.BeautifulSoup(text)
+        try:
+            for paragraph in soup.find("div",{ "class" : "articleBody"}).findAll("p"):
+                Paragraph.objects.create(article=self,text=str(paragraph))
+        except AttributeError:
+            pass #failed to load paragraphs
+    def process_raw(self):
+        o = json.loads(self.raw)
+
+        self.create_paragraphs(o)
+        self.headline = o['headline']
+
+admin.site.register(Article)
+class Paragraph(models.Model):
+    article = models.ForeignKey(Article)
+    text = models.TextField()
+admin.site.register(Paragraph)
+
+
+
 
 class Tweet(models.Model):
     text = models.TextField()
     raw = models.TextField()
-    created_at = CreationDateTimeField()
+    created_at = CreationDateTimeField(null=True)
     def process_raw(self):
         obj = json.loads(self.raw)
         self.text = obj['text']
