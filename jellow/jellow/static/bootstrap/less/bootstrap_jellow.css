@@ -801,4 +801,5 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
-.article{border:6px solid rgba(26, 25, 20, 0.9);}
+.search_news{margin-left:20px;margin-top:0px;position:relative;}
+.RFA{font-size:14px;font-weight:bold;}

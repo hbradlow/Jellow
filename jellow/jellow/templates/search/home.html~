@@ -1,25 +1,14 @@
 {% extends "search/base.html" %}
 
 {% block body %}
-<<<<<<< HEAD
-{% for article in articles_list %}
-   
-   <div class="span8 article">
-   <li>{{article.Name}}</li>
-   <li>{{article.Content}}</li>
-   </div>
-
-{% endfor %}
-</div>
-=======
-    {% for paragraph in paragraphs %}
-        {% if not forloop.first %}
-            <hr />
-        {% endif %}
-        <div class="row">
-            <h3>{{paragraph.article.headline}}</h3>
-            {{paragraph.text|striptags}}
-        </div>
-    {% endfor %}
->>>>>>> ccf4ba1e8cad6f66552afbacbf0611dbcdfcb0bc
+	<div class="list_of_paragraphs search_news">
+		{% for paragraph in paragraphs %} 
+			<div class="grid" data-size="1">
+				{{paragraph.text|striptags}}
+				<br>
+				<div class="RFA">Read Full Article: </div>
+				<a href="{% url article_detail paragraph.article.pk %}">{{paragraph.article.headline}}</a>
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}
