@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
      url(r'^collect_data/', include('collect_data.urls')),
+     url(r'^search/', include('search.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

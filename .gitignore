@@ -1,14 +1,16 @@
-*.py[cod]
+*.db
+
+*.py[co]
 
 # Packages
 *.egg
 *.egg-info
 dist
 build
+venv
 eggs
 parts
 bin
-lib
 var
 sdist
 develop-eggs
@@ -20,18 +22,15 @@ pip-log.txt
 # Unit test / coverage reports
 .coverage
 .tox
-nosetests.xml
 
-# Translations
+#Translations
 *.mo
 
-# Mr Developer
+#Mr Developer
 .mr.developer.cfg
-.project
-.pydevproject
 
-# text editor
+#other
+media
+whoosh_index
+site_media
 *.swp
-
-# virtual env
-venv
