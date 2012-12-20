@@ -1,11 +1,13 @@
 {% extends "search/base.html" %}
 
 {% block body %}
+    <h1>{{user.email}}</h1>
     {% for paragraph in paragraphs %}
         {% if not forloop.first %}
             <hr />
         {% endif %}
         <div class="row">
+            <img src="{{user.get_profile.image.url}}"/>
             <a href="{% url article_detail paragraph.article.pk %}">
                 <h3>{{paragraph.article.headline}}</h3>
                 {{paragraph.text|striptags}}

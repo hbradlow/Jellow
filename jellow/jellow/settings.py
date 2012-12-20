@@ -91,6 +91,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -122,6 +123,7 @@ INSTALLED_APPS = (
     #external
     'south',
     'haystack',
+    'debug_toolbar',
 
     #project
     'collect_data',
@@ -171,3 +173,6 @@ HAYSTACK_CONNECTIONS = {
 
 #profile
 AUTH_PROFILE_MODULE = "profiles.models.UserProfile"
+
+#debug toolbar
+INTERNAL_IPS = ('127.0.0.1',)
