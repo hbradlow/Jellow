@@ -1,14 +1,46 @@
 {% extends "search/base.html" %}
+<!--
 
-{% block body %}
-	<div class="list_of_paragraphs search_news">
+	<div class="list_of_paragraphs search">
 		{% for paragraph in paragraphs %} 
+		    
+
 			<div class="grid" data-size="1">
+			  <div class="search_article">
+			  <img src="{{user.get_profile.image.url}}"></img>
+			        {{user.get_profile.location}}
 				{{paragraph.text|striptags}}
+				<br>
 				<br>
 				<div class="RFA">Read Full Article: </div>
 				<a href="{% url article_detail paragraph.article.pk %}">{{paragraph.article.headline}}</a>
+			  </div>
 			</div>
+
 		{% endfor %}
 	</div>
+
+-->
+{% block body %}
+<div class="list_of_paragraphs search">
+  {% for paragraph in paragraphs %}
+  <div class="grid search_article span12" data-size="1">
+   <!-- <div class="search_article">-->
+      <div class="row">
+	<div class="span4"><img src="{{user.get_profile.image.url}}"></img></div>
+	<div class="span8">{{user.get_profile.location}}</div>
+      </div>
+      <div class="row">
+	<div>{{paragraph.text|striptags}}</div>
+      </div>
+      <div class="row">
+	<div>
+	  <div class="RFA">Read Full Article: </div>
+          <a href="{% url article_detail paragraph.article.pk %}">{{paragraph.article.headline}}</a>
+	</div>
+      </div>
+   <!-- </div>-->
+   </div>
+   {% endfor %} 
+</div>
 {% endblock %}

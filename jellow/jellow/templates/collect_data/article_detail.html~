@@ -1,0 +1,14 @@
+{% extends "collect_data/base.html" %}
+
+{% block body %}
+    {% include "collect_data/rubric_panel.html" %}
+    <div class="row">
+        <h3>{{object.headline}}</h3>
+        {% for paragraph in object.paragraph_set.all reversed %}
+            {% if not forloop.first %}<br />{% endif %}
+            <div class="row">
+                {{paragraph.text|striptags}}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
