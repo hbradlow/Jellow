@@ -117,6 +117,7 @@ INSTALLED_APPS = (
 
     #external
     'south',
+    'haystack',
 
     #project
     'collect_data',
@@ -155,3 +156,11 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/jellow')}
+
+#haystack
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+    },
+}
