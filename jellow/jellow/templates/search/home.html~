@@ -1,0 +1,14 @@
+{% extends "search/base.html" %}
+
+{% block body %}
+	<div class="list_of_paragraphs search_news">
+		{% for paragraph in paragraphs %} 
+			<div class="grid" data-size="1">
+				{{paragraph.text|striptags}}
+				<br>
+				<div class="RFA">Read Full Article: </div>
+				<a href="{% url article_detail paragraph.article.pk %}">{{paragraph.article.headline}}</a>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

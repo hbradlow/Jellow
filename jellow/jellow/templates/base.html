@@ -11,7 +11,7 @@
         {% endblock %}
 
         {% block style_base %}
-            <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+            <link href="{% static "bootstrap/less/bootstrap_jellow.css" %}" rel="stylesheet">
             <link href="{% static "bootstrap/css/bootstrap-responsive.css" %}" rel="stylesheet">
             {% block extra_style %}{% endblock %}
         {% endblock %}
@@ -27,8 +27,14 @@
 
         {% block script_base %}
             <script src="{% static "jquery.min.js" %}"></script>
+	    <script src="{% static "blocksit.js" %}"></script>
             <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
+	    <script src="{% static "bootstrap/js/bootstrap_jellow.js" %}"></script>
             <script src="{% static "bootstrap/js/bootstrap-typeahead.js" %}"></script>
+<<<<<<< HEAD
+	    
+=======
+>>>>>>> 14cbfb89bb95e62accfe5c84c0a9a5be6ba03737
             <script type="text/javascript">
                 var _gaq = _gaq || [];
                 _gaq.push(['_setAccount', 'UA-34356457-1']);
@@ -82,7 +88,7 @@
         {% endblock %}
 
         {% block body_base %}
-            <div class="container-fluid" style="margin-top:80px;min-height:300px;">
+            <div class="container-fluid" style="margin-top:100px;min-height:300px;">
                 <div class="row-fluid">
                     <div class="span1"></div>
                     <div class="span10">

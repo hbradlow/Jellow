@@ -2,6 +2,7 @@ from collect_data.models import Tweet
 from django.shortcuts import *
 from django.shortcuts import get_object_or_404
 
+
 from haystack.query import SearchQuerySet
 
 def home(request):
@@ -10,3 +11,4 @@ def home(request):
         sqs = SearchQuerySet().filter(content_auto=request.GET.get('q', ''))
         paragraphs = [a.object for a in sqs[0:10]]
     return render_to_response("search/home.html",{"paragraphs":paragraphs})
+
