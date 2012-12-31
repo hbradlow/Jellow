@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block topbar_base %}
+{% endblock %}
+
+{% block body_base %}
+  <div class="container-fluid info_background" style="margin-top:0px; margin-bottom:0px;">
+    <div class="row-fluid">
+      <div class="span1"></div>
+        <div class="span10">
+	  {% include "_messages.html" %}
+	  {% block body %}
+	  <div class="logo">
+	  <img src="/site_media/media/image/jellow_logo.png" width="250px" height="187.5px">
+	  </div>
+	  <div class="row">
+	  <div class="body_class">
+
+	    <p class="intro_text">From station to station, television to television, news has become obsolete in the way it is presented to the masses. Conflicting views, contradictory statements, and outright misinformation by media corporations has misled society in its pursuit of real information.
+<br><br>
+<b>[jellow]</b> is a peer-to-peer news stream that allows users and readers to discover and share the latest news, ideas, and opinions on world issues that are currently occurring. All news topics are updated ‘live’ allowing readers and users to communicate with one another directly by the use of hashtags and searches.
+<br><br>
+<a href="#" class="intro_link"><b>Change the face of journalism</b></a> 
+</p>
+	  </div>
+	  
+	  <!-- Feature Section Header -->
+	  <div class="row">
+	  <div>
+	    <h4 class="color_yellow">Tools To Reinvent Journalism:</h4>
+	    <br>
+	    <div class="span2"><a href="#myCarousel" id="paragraph_slicing"><b>Paragraph Slicing</b></a></div>
+	    <div class="span2"><a href="#myCarousel" id="heat_map"><b>Heat Map</b></a></div>
+	    <div class="span2"><a href="#myCarousel" id="article_rubric"><b>Rubric Grading</b></a></div>
+	    <div class="span2"><a href="#myCarousel" id="news_filter"><b>News Filter</b></a></div>
+	  </div>
+	  <br><hr class="section_divider"><br>
+	  </div>
+	  
+	  <!-- Feature Carousel -->
+	  <div class="row">
+	  <div id="myCarousel" class="carousel slide">
+	    <div class="carousel-inner">
+	      <div class="active item">
+		<p class="color_yellow">Through the use of hashtags per each article uploaded by a contributor, 
+readers and users have the ability to search for specific keywords or topics within articles. 
+When users upload an article, they label each paragraph with a specific hashtag related to the topic the paragraph is addressing. Each paragraph within an article will have a handful of tags within an umbrella tag related to the overall article headline. That way users and readers can pinpoint specific topics within overall headlines giving them a “snapshot” of what they were looking for.</p>
+	      </div>
+	      <div class="item">
+		<p class="color_yellow">The website will contain a page displaying a map of the world. “Hot spots” on the globe will be labeled showcasing where all of the buzz or articles are coming from based on the tags that contributors are using within their articles. This allows viewers and readers to quickly spot where all of the latest chatter is coming from and then delve deeper into the facts at hand. All of this is live and uploaded by those who are closest to the news source.</p>
+	      </div>
+	      <div class="item">
+		<p class="color_yellow">Top articles that emerge first in search/tag results are chosen by peer graded reviews based on 4 factors that affect the overall content. Those with the highest average peer grade are given seniority and are displayed at the top of search result pages. Points system is also integrated into the website allowing users to accumulate points by contributing articles and grading other articles that have been uploaded.</p>
+	      <div class="item">
+		<p class="color_yellow">Whether on the heat map or in search results, users will have the ability to filter their news either by text article, video, audio, or photo. Currently, you can’t do this on any other news website or social media news aggregators such as Twitter. This is an extremely useful tool if you are looking for a video or photo that captures the information you wanted to depict in a non-refutable fashion.</p>
+	      </div>
+	    </div>
+	   </div>
+	  </div>
+	  {% endblock %}
+      <div class="span1"></div>
+    </div>
+  </div>
+ {% endblock %}
+

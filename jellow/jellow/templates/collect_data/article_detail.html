@@ -2,7 +2,8 @@
 
 {% block body %}
     {% include "collect_data/rubric_panel.html" %}
-    <div class="row">
+  <div class="list_of_paragraphs"> 
+   <div class="row">
         <h3>{{object.headline}}</h3>
         {% for paragraph in object.paragraph_set.all reversed %}
             {% if not forloop.first %}<br />{% endif %}
@@ -11,4 +12,5 @@
             </div>
         {% endfor %}
     </div>
+   </div>
 {% endblock %}
