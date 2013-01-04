@@ -8,7 +8,9 @@ $(document).ready(function() {
 		$('#myModal').modal();
 	    });
 
-	$('.carousel').carousel('pause');
+	$('.carousel').carousel({
+		interval: false
+		    });
 	
 	var paragraph_slicing = 0;
 	var heat_map = 1;
@@ -17,30 +19,35 @@ $(document).ready(function() {
 
 	$("#paragraph_slicing").hover(function(){
 		$('.carousel').carousel(paragraph_slicing);
-		$('.carousel').carousel('pause');
+		$('.carousel').carousel({
+                        interval: false
+                            });
 		return false;
 	    });
 	
 	$("#heat_map").hover(function(){
                 $('.carousel').carousel(heat_map);
-                $('.carousel').carousel('pause');
+		$('.carousel').carousel({
+                        interval: false
+                            });
                 return false;
             });
 
 	$("#article_rubric").hover(function(){
                 $('.carousel').carousel(article_rubric);
-                $('.carousel').carousel('pause');
+		$('.carousel').carousel({
+                        interval: false,
+                            });
                 return false;
             });
 
 	$("#news_filter").hover(function(){
                 $('.carousel').carousel(news_filter);
-                $('.carousel').carousel('pause');
+                $('.carousel').carousel({
+			interval: false
+			    });
                 return false;
             });
-
-    
-	
     });
 
 

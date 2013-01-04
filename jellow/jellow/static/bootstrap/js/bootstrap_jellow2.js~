@@ -34,7 +34,7 @@ $(document).ready(function() {
             });
 
 	$("#news_filter").hover(function(){
-                $('.carousel').carousel(news_filter);
+                $('.carousel').carousel(3);
                 $('.carousel').carousel('pause');
                 return false;
             });

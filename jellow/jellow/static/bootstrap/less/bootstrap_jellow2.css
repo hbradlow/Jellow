@@ -804,18 +804,14 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .search{margin-top:0px;position:relative;}
 .body_class{background-image:url('/site_media/media/image/yellow_background.jpeg');background-size:800px 600px;background-repeat:no-repeat;display:inline-block;height:600px;width:1143px;margin-left:150px;margin-top:40px;}
 .logo{margin-left:0px;margin-top:20px;}
-.intro_text{position:relative;top:240px;left:10px;width:450px;height:500px;color:#003366;font-family:"Times New Roman";font-size:18px;}
+.intro_text{position:relative;top:240px;left:10px;width:450px;height:250px;color:#003366;font-family:"Times New Roman";font-size:18px;}
 .navbar-search{margin-top:12px;}
 #header{background-color:#003366;width:1424px;height:60px;position:absolute;padding-right:100px;padding-left:100px;color:#e8eb24;}
 .section_divider{background-color:#e8eb24;}
 .intro_link{color:#003366;}.intro_link:hover{text-decoration:underline;}
-#paragraph_slicing{float:left;}
-#heat_map{float:left;}
-#article_rubric{float:left;}
-#news_filter{float:left;}
 .span10 .main_body{margin:0px;}
-.info_background{background-color:#003366;}
-.color_yellow{color:#e8eb24;}
+.info_background{background-color:#fffafa;}
+.color_yellow{color:#fffafa;margin-bottom:20px;}
 .navbar .brand{color:#e8eb24;}
 .background_color{background-color:rgba(26, 25, 20, 0.9);}
 .search_article{border:2px;padding:8px;overflow:hidden;}

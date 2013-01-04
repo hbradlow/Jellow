@@ -1,6 +1,4 @@
 {% extends "base.html" %}
-
-
 {% block topbar_base %}
 {% endblock %}
 
@@ -9,11 +7,36 @@
     <div class="row-fluid">
       <div class="span1"></div>
         <div class="span10">
+	  <div class="row">
 	  {% include "_messages.html" %}
 	  {% block body %}
 	  <div class="logo">
 	  <img src="/site_media/media/image/jellow_logo.png" width="250px" height="187.5px">
 	  </div>
+	  </div>
+
+    <div class="row" style="height:100px;">
+      <div class="span11" style="border:2px solid #000">
+	<img style="width:610px height:10px;" src="/site_media/media/image/homepage_banner.png"/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span7" style="border:2px solid #acae9b; margin-right:10px;">
+        <img style="width:800px; height:450px;" src="/site_media/media/image/yellow_background.jpeg"/>
+      </div>
+      <div class="span4">
+        <div class="row" style="border:2px solid #acae9b;">
+        <img style="width:500px; height:225px;" src="/site_media/media/image/blue.png"/>
+        </div>
+        <div class="row" style="border:2px solid #acae9b; margin-top:10px;">
+        <img style="width:500px; height:212px;" src="/site_media/media/image/yellow.png"/>
+        </div>
+      </div>
+    </div>
+      
+
+
 	  <div class="row">
 	  <div class="body_class">
 
@@ -26,9 +49,10 @@
 	  </div>
 	  
 	  <!-- Feature Section Header -->
+
 	  <div class="row">
 	  <div>
-	    <h2 class="color_yellow">The Tools To Reinvent Journalism:</h2>
+	    <h4 class="color_yellow">Tools To Reinvent Journalism:</h4>
 	    <br>
 	    <div class="span2"><a href="#myCarousel" id="paragraph_slicing"><b>Paragraph Slicing</b></a></div>
 	    <div class="span2"><a href="#myCarousel" id="heat_map"><b>Heat Map</b></a></div>
@@ -44,6 +68,8 @@
 	    <div class="carousel-inner">
 	      <div class="active item">
 		<p class="color_yellow">Through the use of hashtags per each article uploaded by a contributor, 
+
+
 readers and users have the ability to search for specific keywords or topics within articles. 
 When users upload an article, they label each paragraph with a specific hashtag related to the topic the paragraph is addressing. Each paragraph within an article will have a handful of tags within an umbrella tag related to the overall article headline. That way users and readers can pinpoint specific topics within overall headlines giving them a “snapshot” of what they were looking for.</p>
 	      </div>
@@ -59,7 +85,7 @@ When users upload an article, they label each paragraph with a specific hashtag 
 	   </div>
 	  </div>
 	  {% endblock %}
-      <div class="span1"></div>
+
     </div>
   </div>
  {% endblock %}

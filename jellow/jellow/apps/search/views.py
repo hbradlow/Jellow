@@ -12,4 +12,5 @@ def home(request):
         paragraphs = [a.object for a in sqs[0:10]]
     return render_to_response("search/home.html",{"paragraphs":paragraphs},context_instance=RequestContext(request))
 
-
+def info_page(request):
+    return render_to_response("info_page.html",)
