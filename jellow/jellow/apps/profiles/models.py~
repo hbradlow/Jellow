@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib import admin
 
-
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     location = models.CharField(max_length=500)

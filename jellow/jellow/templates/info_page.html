@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
 {% block topbar_base %}
 {% endblock %}
 
@@ -14,42 +15,42 @@
 
     <div class="row" style="margin-bottom:10px; margin-top:20px;">
       <div class="span11">
-	<img style="width:610px height:10px;" src="/site_media/media/image/homepage_banner.png"/>
+	<img style="width:610px height:10px;" src="{% static "img/homepage_banner.png" %}"/>
       </div>
     </div>
 
     <div class="row">
       <div class="span7" style="border:2px solid #acae9b; margin-right:10px; width:669px;">
-        <img style="width:750px; height:430px;" src="/site_media/media/image/egypt.png"/>
+        <img style="width:750px; height:430px;" src="{% static "img/egypt.png" %}"/>
       </div>
       <div class="span4" style="margin-left:25px;">
         <div class="row" style="border:2px solid #acae9b;">
-        <img style="width:490px; height:207px;" src="/site_media/media/image/soldier.png"/>
+        <img style="width:490px; height:207px;" src="{% static "img/soldier.png" %}"/>
         </div>
         <div class="row" style="border:2px solid #acae9b; margin-top:10px;">
-        <img style="width:490px; height:212px;" src="/site_media/media/image/tsunami.png"/>
+        <img style="width:490px; height:212px;" src="{% static "img/tsunami.png" %}"/>
         </div>
       </div>
     </div>
       
     <div class="row" style="margin-top: 10px; margin-bottom: 10px";>
       <div class="span11">
-        <img style="width:610px height:10px;" src="/site_media/media/image/why_jellow.png"/>
+        <img style="width:610px height:10px;" src="{% static "img/why_jellow.png" %}"/>
       </div>
     </div>
     
     <div class="row" style="margin-bottom:10px";>
       <div class="span5" style="border:2px solid #acae9b; margin-right:0px;">
-        <img style="height:400px;" src="/site_media/media/image/cruise1.png"/>
+        <img style="height:400px;" src="{% static "img/cruise1.png" %}"/>
       </div>
-      <div class="span6" style="border:2px solid #acae9b; margin-left:10px; width:590px;">
-        <img style="height:400px;" src="/site_media/media/image/obama.png"/>
+      <div class="span6" style="border:2px solid #acae9b; margin-left:10px; width:592px;">
+        <img style="height:400px;" src="{% static "img/obama.png" %}"/>
       </div>
     </div>
 
     <div class="row" style="margin-top: 10px; margin-bottom: 20px";>
       <div class="span11">
-        <a href=""><img style="width:610px height:10px;" src="/site_media/media/image/sign_up2.png"/></a>
+        <a href=""><img style="width:610px height:10px;" src="{% static "img/sign_up2.png" %}"/></a>
       </div>
     </div>
 
