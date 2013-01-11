@@ -34,19 +34,19 @@ class Paragraph(models.Model):
 admin.site.register(Paragraph)
 
 rating_choices = (
-    (1,"1"),
-    (2,"2"),
-    (3,"3"),
-    (4,"4"),
-    (5,"5"),
+    ("1","1"),
+    ("2","2"),
+    ("3","3"),
+    ("4","4"),
+    ("5","5"),
 )
 
 class Rating(models.Model):
     article = models.ForeignKey(Article,null=True)
-    organization = models.IntegerField(choices=rating_choices, default=1)
-    support = models.IntegerField(choices=rating_choices, default=1)
-    readability = models.IntegerField(choices=rating_choices, default=1)
-    tags = models.IntegerField(choices=rating_choices, default=1)
+    organization = models.IntegerField(max_length=10,choices=rating_choices)
+    support = models.IntegerField(max_length=10,choices=rating_choices)
+    readability = models.IntegerField(max_length=10,choices=rating_choices)
+    tags = models.IntegerField(max_length=10,choices=rating_choices, default=1)
     comments = models.TextField()
     def get_overall_rating(self):
         return fsum(self.organization + self.support + self.support + self.readability + self.tags)/5.0
