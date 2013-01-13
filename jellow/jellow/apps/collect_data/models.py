@@ -11,7 +11,7 @@ class Article(models.Model):
     pub_date = models.DateTimeField()
     raw = models.TextField()
     headline = models.CharField(max_length=500)
-    reporter = models.ForeignKey(UserProfile)
+    reporter = models.ForeignKey(UserProfile,null=True)
     def create_paragraphs(self,o):
         url = o['url'] 
         text = requests.get(url).text 

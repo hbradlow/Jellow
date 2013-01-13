@@ -8,83 +8,14 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'Article'
-        db.create_table('collect_data_article', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('pub_date', self.gf('django.db.models.fields.DateTimeField')()),
-            ('raw', self.gf('django.db.models.fields.TextField')()),
-            ('headline', self.gf('django.db.models.fields.CharField')(max_length=500)),
-            ('reporter', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['profiles.UserProfile'])),
-        ))
-        db.send_create_signal('collect_data', ['Article'])
 
-        # Adding model 'Paragraph'
-        db.create_table('collect_data_paragraph', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('article', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['collect_data.Article'])),
-            ('text', self.gf('django.db.models.fields.TextField')()),
-        ))
-        db.send_create_signal('collect_data', ['Paragraph'])
-
-        # Adding model 'Rating'
-        db.create_table('collect_data_rating', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('article', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['collect_data.Article'], null=True)),
-            ('organization', self.gf('django.db.models.fields.IntegerField')(default=1)),
-            ('support', self.gf('django.db.models.fields.IntegerField')(default=1)),
-            ('readability', self.gf('django.db.models.fields.IntegerField')(default=1)),
-            ('tags', self.gf('django.db.models.fields.IntegerField')(default=1)),
-            ('comments', self.gf('django.db.models.fields.TextField')()),
-        ))
-        db.send_create_signal('collect_data', ['Rating'])
-
-        # Adding model 'Tweet'
-        db.create_table('collect_data_tweet', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('text', self.gf('django.db.models.fields.TextField')()),
-            ('raw', self.gf('django.db.models.fields.TextField')()),
-            ('created_at', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime.now, null=True, blank=True)),
-        ))
-        db.send_create_signal('collect_data', ['Tweet'])
-
-        # Adding model 'Coordinate'
-        db.create_table('collect_data_coordinate', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('tweet', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['collect_data.Tweet'])),
-            ('type', self.gf('django.db.models.fields.CharField')(max_length=30)),
-            ('latitude', self.gf('django.db.models.fields.FloatField')()),
-            ('longitude', self.gf('django.db.models.fields.FloatField')()),
-        ))
-        db.send_create_signal('collect_data', ['Coordinate'])
-
-        # Adding model 'Hashtag'
-        db.create_table('collect_data_hashtag', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('tweet', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['collect_data.Tweet'])),
-            ('text', self.gf('django.db.models.fields.CharField')(max_length=200)),
-        ))
-        db.send_create_signal('collect_data', ['Hashtag'])
-
+        # Changing field 'Article.reporter'
+        db.alter_column('collect_data_article', 'reporter_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['profiles.UserProfile'], null=True))
 
     def backwards(self, orm):
-        # Deleting model 'Article'
-        db.delete_table('collect_data_article')
 
-        # Deleting model 'Paragraph'
-        db.delete_table('collect_data_paragraph')
-
-        # Deleting model 'Rating'
-        db.delete_table('collect_data_rating')
-
-        # Deleting model 'Tweet'
-        db.delete_table('collect_data_tweet')
-
-        # Deleting model 'Coordinate'
-        db.delete_table('collect_data_coordinate')
-
-        # Deleting model 'Hashtag'
-        db.delete_table('collect_data_hashtag')
-
+        # Changing field 'Article.reporter'
+        db.alter_column('collect_data_article', 'reporter_id', self.gf('django.db.models.fields.related.ForeignKey')(default=1, to=orm['profiles.UserProfile']))
 
     models = {
         'auth.group': {
@@ -122,7 +53,7 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'pub_date': ('django.db.models.fields.DateTimeField', [], {}),
             'raw': ('django.db.models.fields.TextField', [], {}),
-            'reporter': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['profiles.UserProfile']"})
+            'reporter': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['profiles.UserProfile']", 'null': 'True'})
         },
         'collect_data.coordinate': {
             'Meta': {'object_name': 'Coordinate'},
