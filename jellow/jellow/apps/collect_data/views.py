@@ -12,7 +12,8 @@ def heatmap(request):
             coordinates.append(coord)
     return render_to_response("collect_data/heatmap.html",{"coordinates":coordinates})
 
-@csrf_exempt
+#@csrf_exempt
+
 def submit_grade(request):
     if request.method=="POST":
         r = Rating()
