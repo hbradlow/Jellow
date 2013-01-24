@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     #external
+    'registration',
     'south',
     'haystack',
     'debug_toolbar',
@@ -174,5 +175,11 @@ HAYSTACK_CONNECTIONS = {
 #profile
 AUTH_PROFILE_MODULE = "profiles.UserProfile"
 
+#registration
+ACCOUNT_ACTIVATION_DAYS = 7
+
 #debug toolbar
 INTERNAL_IPS = ('127.0.0.1',)
+DEBUG_TOOLBAR_CONFIG = {
+    "INTERCEPT_REDIRECTS": False,
+}

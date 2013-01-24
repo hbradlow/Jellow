@@ -4,17 +4,16 @@
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8" /4>
         <title>{% block head_title_base %}Jellow: {% block head_title %}{% endblock %}{% endblock %}</title>
-
         {% block viewport %}
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% endblock %}
 
         {% block style_base %}
-            <link href="{% static "css/base.css" %}" rel="stylesheet">
+            <link href="{% static "bootstrap/less/bootstrap_jellow2.css" %}" rel="stylesheet">
             <link href="{% static "bootstrap/css/bootstrap-responsive.css" %}" rel="stylesheet">
-            <link href="{% static "css/jquery.pageslide1.css" %}" rel="stylesheet">
+	    <link href="{% static "css/jquery.pageslide1.css" %}" rel="stylesheet">
             {% block extra_style %}{% endblock %}
         {% endblock %}
 
@@ -65,7 +64,7 @@
                                 <span class="icon-bar"></span>
                             </a>
 
-                            {% block site_brand %}<a class="brand" href="{% url "home" %}">Jellow</a>{% endblock %}
+                            {% block site_brand %}<a class="brand" href="{% url "home" %}"><img src="{% static "img/jellow_logo.png" %}" width="150px" height="115px"></a>{% endblock %}
                             <div class="nav-collapse">
                                 {% block nav %}
                                     <ul class="nav">

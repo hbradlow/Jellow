@@ -1,6 +1,4 @@
-{% comment %}
 {% load i18n %}
-{% load url from future %}
 
 <div class="pull-right">
     <ul class="nav pull-right">
@@ -11,16 +9,15 @@
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="{% url "auth_logout" %}"><i class="icon-user"></i> {% trans "Logout" %}</a></li>
+                    <li><a href="{% url auth_logout %}"><i class="icon-user"></i> {% trans "Logout" %}</a></li>
                 </ul>
             </li>
         {% else %}
             <li>
-                <a href="{% url "signup" %}">
+                <a href="{% url registration_register %}">
                     {% trans "Log in or Sign Up" %}
                 </a>
 			</li>
         {% endif %}
     </ul>
 </div>
-{% endcomment %}

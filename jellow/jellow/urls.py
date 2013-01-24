@@ -10,6 +10,8 @@ urlpatterns = patterns('',
      url(r'^info_page/$', "info_page", name="info_page"),
      url(r'^s/', include('haystack.urls')),
 
+     url(r'^accounts/', include('registration.backends.default.urls')),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
