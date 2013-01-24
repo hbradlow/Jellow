@@ -28,6 +28,7 @@ class Article(models.Model):
         self.headline = o['headline']
 
 admin.site.register(Article)
+
 class Paragraph(models.Model):
     article = models.ForeignKey(Article)
     text = models.TextField()
