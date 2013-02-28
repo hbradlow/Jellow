@@ -7,6 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
+
 )
 
 MANAGERS = ADMINS
@@ -20,6 +21,7 @@ TIME_ZONE = 'America/Chicago'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
+
 
 SITE_ID = 1
 
@@ -65,6 +67,7 @@ STATICFILES_DIRS = (
 
 # List of finder classes that know how to find static files in
 # various locations.
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -121,7 +124,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     #external
-    'registration',
+    #'registration',
     'south',
     'haystack',
     'debug_toolbar',
@@ -168,7 +171,9 @@ DATABASES = {'default': dj_database_url.config(default='postgres://localhost/jel
 #haystack
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'haystack',
     },
 }
 

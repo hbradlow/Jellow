@@ -4,13 +4,10 @@ South==0.7.6
 argparse==1.2.1
 dj-database-url==0.2.1
 django-extensions==1.0.2
-django-haystack==2.0.0-beta
-gevent==0.13.8
-greenlet==0.4.0
-grequests==0.1.0
-haystack==0.15
+git+git://github.com/toastdriven/django-haystack.git
 psycopg2==2.4.6
 python-ptrace==0.6.4
 -e git+git@github.com:kennethreitz/requests.git@0769ee3b6dce489733dd34e54072395d9e92e4da#egg=requests-dev
 tweepy==1.12
 wsgiref==0.1.2
+pyelasticsearch==0.3

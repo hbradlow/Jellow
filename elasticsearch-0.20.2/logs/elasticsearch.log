@@ -1,0 +1,14 @@
+[2013-02-27 16:15:16,532][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: initializing ...
+[2013-02-27 16:15:16,551][INFO ][plugins                  ] [Silver Fox] loaded [], sites []
+[2013-02-27 16:15:21,338][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: initialized
+[2013-02-27 16:15:21,338][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: starting ...
+[2013-02-27 16:15:21,552][INFO ][transport                ] [Silver Fox] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.2.13.224:9300]}
+[2013-02-27 16:15:24,883][INFO ][cluster.service          ] [Silver Fox] new_master [Silver Fox][8O9O3lMcRVaejRszAoG-tQ][inet[/10.2.13.224:9300]], reason: zen-disco-join (elected_as_master)
+[2013-02-27 16:15:24,974][INFO ][discovery                ] [Silver Fox] elasticsearch/8O9O3lMcRVaejRszAoG-tQ
+[2013-02-27 16:15:25,018][INFO ][http                     ] [Silver Fox] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.2.13.224:9200]}
+[2013-02-27 16:15:25,018][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: started
+[2013-02-27 16:15:25,101][INFO ][gateway                  ] [Silver Fox] recovered [0] indices into cluster_state
+[2013-02-27 16:22:29,581][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: stopping ...
+[2013-02-27 16:22:29,639][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: stopped
+[2013-02-27 16:22:29,640][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: closing ...
+[2013-02-27 16:22:29,648][INFO ][node                     ] [Silver Fox] {0.20.2}[806]: closed

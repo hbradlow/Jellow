@@ -8,4 +8,4 @@ class ParagraphIndex(indexes.SearchIndex, indexes.Indexable):
     def get_model(self):
         return Paragraph
     def index_queryset(self):
-        return self.get_model().all()
+        return self.get_model().objects

@@ -1,0 +1,775 @@
+[2013-02-27 00:01:19,865][INFO ][monitor.jvm              ] [Hildegarde] [gc][ParNew][124096][315] duration [759ms], collections [1]/[1.1s], total [759ms]/[10.7s], memory [102.9mb]->[99.1mb]/[1015.6mb], all_pools {[Code Cache] [4.7mb]->[4.7mb]/[48mb]}{[Par Eden Space] [5.6mb]->[189.6kb]/[66.5mb]}{[Par Survivor Space] [2mb]->[2mb]/[8.3mb]}{[CMS Old Gen] [95.2mb]->[96.9mb]/[940.8mb]}{[CMS Perm Gen] [37.6mb]->[37.6mb]/[82mb]}
+[2013-02-27 00:12:07,142][WARN ][index.engine.robin       ] [Hildegarde] [twitter][2] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/2/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:12:07,144][WARN ][index.engine.robin       ] [Hildegarde] [twitter][0] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/0/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:12:07,142][WARN ][index.engine.robin       ] [Hildegarde] [twitter][1] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/1/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:12:07,142][WARN ][index.engine.robin       ] [Hildegarde] [twitter][3] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/3/index/segments_2 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:12:07,142][WARN ][index.engine.robin       ] [Hildegarde] [twitter][4] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/4/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:42:07,581][WARN ][index.engine.robin       ] [Hildegarde] [twitter][0] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/0/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:42:07,581][WARN ][index.engine.robin       ] [Hildegarde] [twitter][2] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/2/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:42:07,581][WARN ][index.engine.robin       ] [Hildegarde] [twitter][1] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/1/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:42:07,583][WARN ][index.engine.robin       ] [Hildegarde] [twitter][4] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/4/index/segments_1 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 00:42:07,583][WARN ][index.engine.robin       ] [Hildegarde] [twitter][3] failed to read latest segment infos on flush
+java.io.FileNotFoundException: /Users/narensathiya/Documents/Documents/Jellow/Jellow/jellow/jellow/nodes/0/indices/twitter/3/index/segments_2 (No such file or directory)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:216)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.NIOFSDirectory$NIOFSIndexInput.<init>(NIOFSDirectory.java:92)
+	at org.apache.lucene.store.NIOFSDirectory.openInput(NIOFSDirectory.java:79)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:952)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:476)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+[2013-02-27 16:22:49,007][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: initializing ...
+[2013-02-27 16:22:49,019][INFO ][plugins                  ] [Super-Skrull] loaded [], sites []
+[2013-02-27 16:22:51,786][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: initialized
+[2013-02-27 16:22:51,786][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: starting ...
+[2013-02-27 16:22:51,895][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: stopping ...
+[2013-02-27 16:22:51,897][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: stopped
+[2013-02-27 16:22:51,897][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: closing ...
+[2013-02-27 16:22:51,907][INFO ][node                     ] [Super-Skrull] {0.20.2}[850]: closed
+[2013-02-27 16:24:52,937][INFO ][node                     ] [Bling] {0.20.2}[874]: initializing ...
+[2013-02-27 16:24:52,945][INFO ][plugins                  ] [Bling] loaded [], sites []
+[2013-02-27 16:24:55,194][INFO ][node                     ] [Bling] {0.20.2}[874]: initialized
+[2013-02-27 16:24:55,194][INFO ][node                     ] [Bling] {0.20.2}[874]: starting ...
+[2013-02-27 16:24:55,286][INFO ][transport                ] [Bling] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-02-27 16:24:58,311][INFO ][cluster.service          ] [Bling] new_master [Bling][ydqU90ekRZmn4yFwb6JUAA][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-02-27 16:24:58,351][INFO ][discovery                ] [Bling] Jellow/ydqU90ekRZmn4yFwb6JUAA
+[2013-02-27 16:24:58,365][INFO ][http                     ] [Bling] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-02-27 16:24:58,366][INFO ][node                     ] [Bling] {0.20.2}[874]: started
+[2013-02-27 16:25:00,463][INFO ][gateway                  ] [Bling] recovered [1] indices into cluster_state
+[2013-02-27 16:29:15,805][INFO ][node                     ] [Bling] {0.20.2}[874]: stopping ...
+[2013-02-27 16:29:15,895][INFO ][node                     ] [Bling] {0.20.2}[874]: stopped
+[2013-02-27 16:29:15,896][INFO ][node                     ] [Bling] {0.20.2}[874]: closing ...
+[2013-02-27 16:29:15,907][INFO ][node                     ] [Bling] {0.20.2}[874]: closed
+[2013-02-27 16:29:23,731][INFO ][node                     ] [Spiral] {0.20.2}[928]: initializing ...
+[2013-02-27 16:29:23,738][INFO ][plugins                  ] [Spiral] loaded [], sites []
+[2013-02-27 16:29:26,102][INFO ][node                     ] [Spiral] {0.20.2}[928]: initialized
+[2013-02-27 16:29:26,102][INFO ][node                     ] [Spiral] {0.20.2}[928]: starting ...
+[2013-02-27 16:29:26,216][INFO ][node                     ] [Spiral] {0.20.2}[928]: stopping ...
+[2013-02-27 16:29:26,218][INFO ][node                     ] [Spiral] {0.20.2}[928]: stopped
+[2013-02-27 16:29:26,218][INFO ][node                     ] [Spiral] {0.20.2}[928]: closing ...
+[2013-02-27 16:29:26,231][INFO ][node                     ] [Spiral] {0.20.2}[928]: closed
+[2013-02-27 16:30:58,593][INFO ][node                     ] [Swordsman] {0.20.2}[944]: initializing ...
+[2013-02-27 16:30:58,600][INFO ][plugins                  ] [Swordsman] loaded [], sites []
+[2013-02-27 16:31:00,889][INFO ][node                     ] [Swordsman] {0.20.2}[944]: initialized
+[2013-02-27 16:31:00,889][INFO ][node                     ] [Swordsman] {0.20.2}[944]: starting ...
+[2013-02-27 16:31:00,984][INFO ][transport                ] [Swordsman] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-02-27 16:31:04,008][INFO ][cluster.service          ] [Swordsman] new_master [Swordsman][gaP91JovSFaEEq5kyrVZxA][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-02-27 16:31:04,052][INFO ][discovery                ] [Swordsman] Jellow/gaP91JovSFaEEq5kyrVZxA
+[2013-02-27 16:31:04,066][INFO ][http                     ] [Swordsman] bound_address {inet[/127.0.0.1:9400]}, publish_address {inet[/127.0.0.1:9400]}
+[2013-02-27 16:31:04,066][INFO ][node                     ] [Swordsman] {0.20.2}[944]: started
+[2013-02-27 16:31:04,797][INFO ][gateway                  ] [Swordsman] recovered [1] indices into cluster_state
+[2013-02-27 16:33:38,134][INFO ][node                     ] [Swordsman] {0.20.2}[944]: stopping ...
+[2013-02-27 16:33:38,226][INFO ][node                     ] [Swordsman] {0.20.2}[944]: stopped
+[2013-02-27 16:33:38,226][INFO ][node                     ] [Swordsman] {0.20.2}[944]: closing ...
+[2013-02-27 16:33:38,237][INFO ][node                     ] [Swordsman] {0.20.2}[944]: closed
+[2013-02-27 16:33:47,974][INFO ][node                     ] [Pyro] {0.20.2}[993]: initializing ...
+[2013-02-27 16:33:47,979][INFO ][plugins                  ] [Pyro] loaded [], sites []
+[2013-02-27 16:33:50,266][INFO ][node                     ] [Pyro] {0.20.2}[993]: initialized
+[2013-02-27 16:33:50,266][INFO ][node                     ] [Pyro] {0.20.2}[993]: starting ...
+[2013-02-27 16:33:50,349][INFO ][transport                ] [Pyro] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-02-27 16:33:53,372][INFO ][cluster.service          ] [Pyro] new_master [Pyro][FuFsbCh6S76G87jHbSVEzw][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-02-27 16:33:53,405][INFO ][discovery                ] [Pyro] Jellow/FuFsbCh6S76G87jHbSVEzw
+[2013-02-27 16:33:53,419][INFO ][http                     ] [Pyro] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-02-27 16:33:53,419][INFO ][node                     ] [Pyro] {0.20.2}[993]: started
+[2013-02-27 16:33:54,623][INFO ][gateway                  ] [Pyro] recovered [1] indices into cluster_state
+[2013-02-27 16:52:07,564][DEBUG][action.search.type       ] [Pyro] [haystack][4], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5119015b]
+org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "content_auto:", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 10}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [haystack] Failed to parse query [content_auto:]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:69)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:246)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+Caused by: org.apache.lucene.queryParser.ParseException: Cannot parse 'content_auto:': Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:211)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:212)
+	... 18 more
+Caused by: org.apache.lucene.queryParser.ParseException: Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.generateParseException(QueryParser.java:1849)
+	at org.apache.lucene.queryParser.QueryParser.jj_consume_token(QueryParser.java:1731)
+	at org.apache.lucene.queryParser.QueryParser.Clause(QueryParser.java:1337)
+	at org.apache.lucene.queryParser.QueryParser.Query(QueryParser.java:1245)
+	at org.apache.lucene.queryParser.QueryParser.TopLevelQuery(QueryParser.java:1234)
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:206)
+	... 19 more
+[2013-02-27 16:52:07,565][DEBUG][action.search.type       ] [Pyro] [haystack][2], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5119015b]
+org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "content_auto:", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 10}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [haystack] Failed to parse query [content_auto:]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:69)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:246)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+Caused by: org.apache.lucene.queryParser.ParseException: Cannot parse 'content_auto:': Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:211)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:212)
+	... 18 more
+Caused by: org.apache.lucene.queryParser.ParseException: Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.generateParseException(QueryParser.java:1849)
+	at org.apache.lucene.queryParser.QueryParser.jj_consume_token(QueryParser.java:1731)
+	at org.apache.lucene.queryParser.QueryParser.Clause(QueryParser.java:1337)
+	at org.apache.lucene.queryParser.QueryParser.Query(QueryParser.java:1245)
+	at org.apache.lucene.queryParser.QueryParser.TopLevelQuery(QueryParser.java:1234)
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:206)
+	... 19 more
+[2013-02-27 16:52:07,564][DEBUG][action.search.type       ] [Pyro] [haystack][1], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5119015b]
+org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "content_auto:", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 10}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [haystack] Failed to parse query [content_auto:]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:69)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:246)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+Caused by: org.apache.lucene.queryParser.ParseException: Cannot parse 'content_auto:': Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:211)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:212)
+	... 18 more
+Caused by: org.apache.lucene.queryParser.ParseException: Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.generateParseException(QueryParser.java:1849)
+	at org.apache.lucene.queryParser.QueryParser.jj_consume_token(QueryParser.java:1731)
+	at org.apache.lucene.queryParser.QueryParser.Clause(QueryParser.java:1337)
+	at org.apache.lucene.queryParser.QueryParser.Query(QueryParser.java:1245)
+	at org.apache.lucene.queryParser.QueryParser.TopLevelQuery(QueryParser.java:1234)
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:206)
+	... 19 more
+[2013-02-27 16:52:07,564][DEBUG][action.search.type       ] [Pyro] [haystack][0], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5119015b]
+org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "content_auto:", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 10}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [haystack] Failed to parse query [content_auto:]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:69)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:246)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+Caused by: org.apache.lucene.queryParser.ParseException: Cannot parse 'content_auto:': Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:211)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:212)
+	... 18 more
+Caused by: org.apache.lucene.queryParser.ParseException: Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.generateParseException(QueryParser.java:1849)
+	at org.apache.lucene.queryParser.QueryParser.jj_consume_token(QueryParser.java:1731)
+	at org.apache.lucene.queryParser.QueryParser.Clause(QueryParser.java:1337)
+	at org.apache.lucene.queryParser.QueryParser.Query(QueryParser.java:1245)
+	at org.apache.lucene.queryParser.QueryParser.TopLevelQuery(QueryParser.java:1234)
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:206)
+	... 19 more
+[2013-02-27 16:52:07,564][DEBUG][action.search.type       ] [Pyro] [haystack][3], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@5119015b]
+org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "content_auto:", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 10}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [haystack] Failed to parse query [content_auto:]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:224)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:69)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:188)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:268)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:246)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+Caused by: org.apache.lucene.queryParser.ParseException: Cannot parse 'content_auto:': Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:211)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:212)
+	... 18 more
+Caused by: org.apache.lucene.queryParser.ParseException: Encountered "<EOF>" at line 1, column 13.
+Was expecting one of:
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    <QUOTED> ...
+    <TERM> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    "[" ...
+    "{" ...
+    <NUMBER> ...
+    
+	at org.apache.lucene.queryParser.QueryParser.generateParseException(QueryParser.java:1849)
+	at org.apache.lucene.queryParser.QueryParser.jj_consume_token(QueryParser.java:1731)
+	at org.apache.lucene.queryParser.QueryParser.Clause(QueryParser.java:1337)
+	at org.apache.lucene.queryParser.QueryParser.Query(QueryParser.java:1245)
+	at org.apache.lucene.queryParser.QueryParser.TopLevelQuery(QueryParser.java:1234)
+	at org.apache.lucene.queryParser.QueryParser.parse(QueryParser.java:206)
+	... 19 more
+[2013-02-27 19:40:03,552][DEBUG][action.search.type       ] [Pyro] [haystack][3], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@50987e1e]
+org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"article": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "text:(egypt)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 20}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [No mapping found for [article] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-02-27 19:40:03,552][DEBUG][action.search.type       ] [Pyro] [haystack][4], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@50987e1e]
+org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"article": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "text:(egypt)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 20}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [No mapping found for [article] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-02-27 19:40:03,552][DEBUG][action.search.type       ] [Pyro] [haystack][0], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@50987e1e]
+org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"article": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "text:(egypt)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 20}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [No mapping found for [article] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-02-27 19:40:03,552][DEBUG][action.search.type       ] [Pyro] [haystack][2], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@50987e1e]
+org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"article": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "text:(egypt)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 20}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [No mapping found for [article] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-02-27 19:40:03,552][DEBUG][action.search.type       ] [Pyro] [haystack][1], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@50987e1e]
+org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"article": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "text:(egypt)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 20}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [No mapping found for [article] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-02-27 19:40:42,581][DEBUG][action.search.type       ] [Pyro] [haystack][4], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4e77e11b]
+org.elasticsearch.search.query.QueryPhaseExecutionException: [haystack][4]: query[filtered(filtered(text:egypt)->cache(QueryWrapperFilter(django_ct:collect_data.paragraph)))->cache(_type:modelresult)],from[0],size[20],sort[<custom:"text": org.elasticsearch.index.field.data.strings.StringFieldDataType$1@7c1f3f7>]: Query Failed [Failed to execute main query]
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:182)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:242)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.IOException: Can't sort on string types with more than one value per doc, or more than one token per field
+	at org.elasticsearch.index.field.data.strings.StringOrdValFieldDataComparator.setNextReader(StringOrdValFieldDataComparator.java:123)
+	at org.apache.lucene.search.TopFieldCollector$OneComparatorNonScoringCollector.setNextReader(TopFieldCollector.java:95)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:576)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:195)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:149)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:487)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:400)
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:176)
+	... 9 more
+[2013-02-27 19:40:42,701][DEBUG][action.search.type       ] [Pyro] [haystack][2], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4e77e11b]
+org.elasticsearch.search.query.QueryPhaseExecutionException: [haystack][2]: query[filtered(filtered(text:egypt)->cache(QueryWrapperFilter(django_ct:collect_data.paragraph)))->cache(_type:modelresult)],from[0],size[20],sort[<custom:"text": org.elasticsearch.index.field.data.strings.StringFieldDataType$1@2b962ecd>]: Query Failed [Failed to execute main query]
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:182)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:242)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.IOException: Can't sort on string types with more than one value per doc, or more than one token per field
+	at org.elasticsearch.index.field.data.strings.StringOrdValFieldDataComparator.setNextReader(StringOrdValFieldDataComparator.java:123)
+	at org.apache.lucene.search.TopFieldCollector$OneComparatorNonScoringCollector.setNextReader(TopFieldCollector.java:95)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:576)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:195)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:149)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:487)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:400)
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:176)
+	... 9 more
+[2013-02-27 19:40:42,701][DEBUG][action.search.type       ] [Pyro] [haystack][1], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4e77e11b]
+org.elasticsearch.search.query.QueryPhaseExecutionException: [haystack][1]: query[filtered(filtered(text:egypt)->cache(QueryWrapperFilter(django_ct:collect_data.paragraph)))->cache(_type:modelresult)],from[0],size[20],sort[<custom:"text": org.elasticsearch.index.field.data.strings.StringFieldDataType$1@10daab16>]: Query Failed [Failed to execute main query]
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:182)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:242)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.IOException: Can't sort on string types with more than one value per doc, or more than one token per field
+	at org.elasticsearch.index.field.data.strings.StringOrdValFieldDataComparator.setNextReader(StringOrdValFieldDataComparator.java:123)
+	at org.apache.lucene.search.TopFieldCollector$OneComparatorNonScoringCollector.setNextReader(TopFieldCollector.java:95)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:576)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:195)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:149)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:487)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:400)
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:176)
+	... 9 more
+[2013-02-27 19:40:42,743][DEBUG][action.search.type       ] [Pyro] [haystack][0], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4e77e11b]
+org.elasticsearch.search.query.QueryPhaseExecutionException: [haystack][0]: query[filtered(filtered(text:egypt)->cache(QueryWrapperFilter(django_ct:collect_data.paragraph)))->cache(_type:modelresult)],from[0],size[20],sort[<custom:"text": org.elasticsearch.index.field.data.strings.StringFieldDataType$1@161abc23>]: Query Failed [Failed to execute main query]
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:182)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:242)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.IOException: Can't sort on string types with more than one value per doc, or more than one token per field
+	at org.elasticsearch.index.field.data.strings.StringOrdValFieldDataComparator.setNextReader(StringOrdValFieldDataComparator.java:123)
+	at org.apache.lucene.search.TopFieldCollector$OneComparatorNonScoringCollector.setNextReader(TopFieldCollector.java:95)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:576)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:195)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:149)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:487)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:400)
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:176)
+	... 9 more
+[2013-02-27 19:40:42,761][DEBUG][action.search.type       ] [Pyro] [haystack][3], node[FuFsbCh6S76G87jHbSVEzw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4e77e11b]
+org.elasticsearch.search.query.QueryPhaseExecutionException: [haystack][3]: query[filtered(filtered(text:egypt)->cache(QueryWrapperFilter(django_ct:collect_data.paragraph)))->cache(_type:modelresult)],from[0],size[20],sort[<custom:"text": org.elasticsearch.index.field.data.strings.StringFieldDataType$1@369875a3>]: Query Failed [Failed to execute main query]
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:182)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:242)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.io.IOException: Can't sort on string types with more than one value per doc, or more than one token per field
+	at org.elasticsearch.index.field.data.strings.StringOrdValFieldDataComparator.setNextReader(StringOrdValFieldDataComparator.java:123)
+	at org.apache.lucene.search.TopFieldCollector$OneComparatorNonScoringCollector.setNextReader(TopFieldCollector.java:95)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:576)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:195)
+	at org.elasticsearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:149)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:487)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:400)
+	at org.elasticsearch.search.query.QueryPhase.execute(QueryPhase.java:176)
+	... 9 more
