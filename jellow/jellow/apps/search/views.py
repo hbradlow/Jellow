@@ -17,4 +17,4 @@ def search(request):
 
 
 def info_page(request):
-    return render_to_response("info_page.html",)
+    return render_to_response("search/info_page.html",)

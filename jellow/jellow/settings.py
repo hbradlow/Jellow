@@ -124,7 +124,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     #external
-    #'registration',
+    'registration',
     'south',
     'haystack',
     'debug_toolbar',

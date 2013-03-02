@@ -7,7 +7,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
      url(r'^collect_data/', include('collect_data.urls')),
      url(r'^', include('search.urls')),
-     url(r'^info_page/$', "info_page", name="info_page"),
      url(r'^s/', include('haystack.urls')),
 
      url(r'^accounts/', include('registration.backends.default.urls')),
