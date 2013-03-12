@@ -29,9 +29,18 @@ class Article(models.Model):
 
 admin.site.register(Article)
 
+class Tag(models.Model):
+    tag = models.CharField(max_length=500)
+    def __unicode__(self):
+        return self.tag
+admin.site.register(Tag)
+
 class Paragraph(models.Model):
     article = models.ForeignKey(Article)
     text = models.TextField()
+    tags = models.ManyToManyField(Tag)
+    def __unicode__(self):
+        return "Headline: " + self.article.headline + " Tags: " +  ', '.join([t.tag for t in self.tags.all()])
 admin.site.register(Paragraph)
 
 rating_choices = (

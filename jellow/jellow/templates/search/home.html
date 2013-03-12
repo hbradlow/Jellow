@@ -1,19 +1,19 @@
 {% extends "search/base.html" %}
 {% block body %}
-<div class="list_of_paragraphs search">
+<div class="list_of_paragraphs search" style="position:fixed;">
   {% for paragraph in paragraphs %}
-  <div class="search_article" data-size="1">
+  <div class="search_article" data-size="1" style="overflow:hidden; position:relative;">
   
       <div class="row">
-	<div class="span4"><img src="{{user.get_profile.image.url}}"></img></div>
+	<div class="span4"><img src=""></img></div>
 	<div class="span8">{{user.get_profile.location}}</div>
       </div>
-      <div class="row paragraph">
+      <div class="row paragraph" style="padding-left:30px;">
 	<p>"{{paragraph.text|striptags}}"</p>
       </div>
-      <div class="row paragraph">
+      <div class="row paragraph" style="padding-left:30px;">
 	<div>
-	  <p class="RFA">Read Full Article:</p> 
+	  <p class="RFA" style="font-weight:bold; margin:0px;">Read Full Article:</p> 
           <!-- href="{% url article_detail paragraph.article.pk %}" -->
 	  <a data_toggle="model" href="{% url article_detail paragraph.article.pk %}" data-target="#modal" class="article">{{paragraph.article.headline}}</a>
 	  

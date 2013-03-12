@@ -1,0 +1,10 @@
+[2013-03-06 12:25:03,815][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: initializing ...
+[2013-03-06 12:25:03,854][INFO ][plugins                  ] [Scrambler] loaded [], sites []
+[2013-03-06 12:25:09,478][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: initialized
+[2013-03-06 12:25:09,479][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: starting ...
+[2013-03-06 12:25:09,716][INFO ][transport                ] [Scrambler] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-03-06 12:25:12,965][INFO ][cluster.service          ] [Scrambler] new_master [Scrambler][OLp3YrXtQ-e84HOt91lLBg][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-03-06 12:25:13,067][INFO ][discovery                ] [Scrambler] Jellow/OLp3YrXtQ-e84HOt91lLBg
+[2013-03-06 12:25:13,122][INFO ][http                     ] [Scrambler] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-03-06 12:25:13,122][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: started
+[2013-03-06 12:25:15,162][INFO ][gateway                  ] [Scrambler] recovered [1] indices into cluster_state

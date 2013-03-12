@@ -1,1 +1,4 @@
 {{object.text}}
+{% for tag in object.tags.all %}
+{{tag.tag}}
+{% endfor %}

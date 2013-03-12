@@ -11,7 +11,7 @@ class Article(models.Model):
     pub_date = models.DateTimeField()
     raw = models.TextField()
     headline = models.CharField(max_length=500)
-    reporter = models.ForeignKey(UserProfile)
+    reporter = models.ForeignKey(UserProfile,null=True)
     def create_paragraphs(self,o):
         url = o['url'] 
         text = requests.get(url).text 
@@ -28,9 +28,17 @@ class Article(models.Model):
         self.headline = o['headline']
 
 admin.site.register(Article)
+
+class Tag(models.Model):
+    tag = models.CharField(max_length=500)
+    def __unicode__(self):
+        return self.tag
+admin.site.register(Tag)
+
 class Paragraph(models.Model):
     article = models.ForeignKey(Article)
     text = models.TextField()
+    tags = models.ManyToManyField(Tag)
 admin.site.register(Paragraph)
 
 rating_choices = (

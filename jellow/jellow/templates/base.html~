@@ -14,6 +14,7 @@
         {% block style_base %}
             <link href="{% static "css/base.css" %}" rel="stylesheet">
             <link href="{% static "bootstrap/css/bootstrap-responsive.css" %}" rel="stylesheet">
+	    <link href="{% static "bootstrap/css/bootstrap_jellow2.css" %}" rel="stylesheet">
             <link href="{% static "css/jquery.pageslide1.css" %}" rel="stylesheet">
             {% block extra_style %}{% endblock %}
         {% endblock %}
@@ -65,7 +66,7 @@
                                 <span class="icon-bar"></span>
                             </a>
 
-                            {% block site_brand %}<a class="brand" href="{% url "home" %}"><img src="{% static "img/jellow_logo.png" %}" style="width:160px; height:40px; margin:0px; padding:0px;"></a>{% endblock %}
+                            {% block site_brand %}<a class="brand" href="{% url "home" %}">Jellow</a>{% endblock %}
                             <div class="nav-collapse">
                                 {% block nav %}
                                     <ul class="nav">
@@ -74,7 +75,12 @@
                                 {% block search_bar %}{% include "_searchbar.html" %}{% endblock %}
                                 {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
                             </div>
-                        {% endblock %}
+
+			    <div style="margin:5px;"><a href="{% url "politics" %}">Politics</a></div>
+			    <div style="margin:5px;"><a href="{% url "world_news" %}">World News</a></div>
+			    <div style="margin:5px;"><a href="{% url "technology" %}">Technology</a></div>
+ 
+			 {% endblock %}
                     </div>
                 </div>
             </div>

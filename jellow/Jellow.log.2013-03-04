@@ -1,0 +1,14 @@
+[2013-03-04 23:56:48,256][INFO ][node                     ] [Ripfire] {0.20.2}[5729]: initializing ...
+[2013-03-04 23:56:48,264][INFO ][plugins                  ] [Ripfire] loaded [], sites []
+[2013-03-04 23:56:52,808][INFO ][node                     ] [Ripfire] {0.20.2}[5729]: initialized
+[2013-03-04 23:56:52,808][INFO ][node                     ] [Ripfire] {0.20.2}[5729]: starting ...
+[2013-03-04 23:56:52,972][INFO ][transport                ] [Ripfire] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-03-04 23:56:56,162][INFO ][cluster.service          ] [Ripfire] new_master [Ripfire][1uZCs5ZLTU-CDu_q3a9vtw][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-03-04 23:56:56,260][INFO ][discovery                ] [Ripfire] Jellow/1uZCs5ZLTU-CDu_q3a9vtw
+[2013-03-04 23:56:56,311][INFO ][http                     ] [Ripfire] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-03-04 23:56:56,312][INFO ][node                     ] [Ripfire] {0.20.2}[5729]: started
+[2013-03-04 23:56:58,413][INFO ][gateway                  ] [Ripfire] recovered [1] indices into cluster_state
+[2013-03-04 23:57:18,198][INFO ][cluster.metadata         ] [Ripfire] [haystack] deleting index
+[2013-03-04 23:57:47,747][INFO ][cluster.metadata         ] [Ripfire] [haystack] creating index, cause [api], shards [5]/[1], mappings []
+[2013-03-04 23:57:47,911][INFO ][cluster.metadata         ] [Ripfire] [haystack] create_mapping [modelresult]
+[2013-03-04 23:57:50,275][INFO ][cluster.metadata         ] [Ripfire] [haystack] update_mapping [modelresult] (dynamic)
