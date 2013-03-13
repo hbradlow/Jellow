@@ -1,14 +1,307 @@
-[2013-03-12 00:50:40,745][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: stopping ...
-[2013-03-12 00:50:41,174][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: stopped
-[2013-03-12 00:50:41,174][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: closing ...
-[2013-03-12 00:50:41,245][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: closed
-[2013-03-12 01:00:47,568][INFO ][node                     ] [Thin Man] {0.20.2}[297]: initializing ...
-[2013-03-12 01:00:47,578][INFO ][plugins                  ] [Thin Man] loaded [], sites []
-[2013-03-12 01:00:52,547][INFO ][node                     ] [Thin Man] {0.20.2}[297]: initialized
-[2013-03-12 01:00:52,547][INFO ][node                     ] [Thin Man] {0.20.2}[297]: starting ...
-[2013-03-12 01:00:52,732][INFO ][transport                ] [Thin Man] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
-[2013-03-12 01:00:55,929][INFO ][cluster.service          ] [Thin Man] new_master [Thin Man][cmlvstevTZ-lnXDYkgv1bw][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
-[2013-03-12 01:00:56,029][INFO ][discovery                ] [Thin Man] Jellow/cmlvstevTZ-lnXDYkgv1bw
-[2013-03-12 01:00:56,077][INFO ][http                     ] [Thin Man] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
-[2013-03-12 01:00:56,077][INFO ][node                     ] [Thin Man] {0.20.2}[297]: started
-[2013-03-12 01:00:58,695][INFO ][gateway                  ] [Thin Man] recovered [1] indices into cluster_state
+[2013-03-13 00:35:03,552][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] deleting index
+[2013-03-13 00:35:03,799][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] creating index, cause [api], shards [5]/[1], mappings []
+[2013-03-13 00:35:03,937][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] create_mapping [modelresult]
+[2013-03-13 00:35:42,920][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] deleting index
+[2013-03-13 00:35:43,024][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] creating index, cause [api], shards [5]/[1], mappings []
+[2013-03-13 00:35:43,264][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] create_mapping [modelresult]
+[2013-03-13 00:35:45,993][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] update_mapping [modelresult] (dynamic)
+[2013-03-13 00:51:52,739][DEBUG][action.search.type       ] [Grim Reaper] [haystack][4], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@17a32ecd]
+org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:52,739][DEBUG][action.search.type       ] [Grim Reaper] [haystack][3], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@17a32ecd]
+org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:52,739][DEBUG][action.search.type       ] [Grim Reaper] [haystack][2], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@17a32ecd]
+org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:52,739][DEBUG][action.search.type       ] [Grim Reaper] [haystack][0], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@17a32ecd]
+org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:52,739][DEBUG][action.search.type       ] [Grim Reaper] [haystack][1], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@17a32ecd]
+org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:56,971][DEBUG][action.search.type       ] [Grim Reaper] [haystack][2], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@385c25dc]
+org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:56,971][DEBUG][action.search.type       ] [Grim Reaper] [haystack][3], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@385c25dc]
+org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:56,971][DEBUG][action.search.type       ] [Grim Reaper] [haystack][4], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@385c25dc]
+org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:56,971][DEBUG][action.search.type       ] [Grim Reaper] [haystack][0], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@385c25dc]
+org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:51:56,971][DEBUG][action.search.type       ] [Grim Reaper] [haystack][1], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@385c25dc]
+org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:53:33,371][DEBUG][action.search.type       ] [Grim Reaper] [haystack][0], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4749fee8]
+org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][0]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:53:33,371][DEBUG][action.search.type       ] [Grim Reaper] [haystack][3], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4749fee8]
+org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][3]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:53:33,371][DEBUG][action.search.type       ] [Grim Reaper] [haystack][1], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4749fee8]
+org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][1]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:53:33,371][DEBUG][action.search.type       ] [Grim Reaper] [haystack][2], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4749fee8]
+org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][2]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more
+[2013-03-13 00:53:33,371][DEBUG][action.search.type       ] [Grim Reaper] [haystack][4], node[nKqr3fRyRQ2OLMR3sucmsg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@4749fee8]
+org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"sort": [{"score": {"order": "asc"}}], "query": {"filtered": {"filter": {"fquery": {"query": {"query_string": {"query": "django_ct:(collect_data.paragraph)"}}, "_cache": true}}, "query": {"query_string": {"query": "(Politics)", "default_operator": "AND", "default_field": "text", "auto_generate_phrase_queries": true, "analyze_wildcard": true}}}}, "from": 0, "size": 30}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:566)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:481)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:466)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:236)
+	at org.elasticsearch.search.action.SearchServiceTransportAction.sendExecuteQuery(SearchServiceTransportAction.java:141)
+	at org.elasticsearch.action.search.type.TransportSearchQueryThenFetchAction$AsyncAction.sendExecuteFirstPhase(TransportSearchQueryThenFetchAction.java:80)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:205)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.performFirstPhase(TransportSearchTypeAction.java:192)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$2.run(TransportSearchTypeAction.java:178)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.elasticsearch.search.SearchParseException: [haystack][4]: from[-1],size[-1]: Parse Failure [No mapping found for [score] in order to sort on]
+	at org.elasticsearch.search.sort.SortParseElement.addSortField(SortParseElement.java:164)
+	at org.elasticsearch.search.sort.SortParseElement.addCompoundSortField(SortParseElement.java:138)
+	at org.elasticsearch.search.sort.SortParseElement.parse(SortParseElement.java:70)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:554)
+	... 11 more

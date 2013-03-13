@@ -1,11 +1,11 @@
 {% extends "search/base.html" %}
 {% block body %}
-<div class="list_of_paragraphs search" style="position:fixed;">
+<div class="list_of_paragraphs search" style="position:relative;">
   {% for paragraph in paragraphs %}
   <div class="search_article" data-size="1" style="overflow:hidden; position:relative;">
   
       <div class="row">
-	<div class="span4"><img src="{{user.get_profile.image.url}}"></img></div>
+	<div class="span4"><img src=""></img></div>
 	<div class="span8">{{user.get_profile.location}}</div>
       </div>
       <div class="row paragraph" style="padding-left:30px;">
@@ -14,9 +14,8 @@
       <div class="row paragraph" style="padding-left:30px;">
 	<div>
 	  <p class="RFA" style="font-weight:bold; margin:0px;">Read Full Article:</p> 
-          <!-- href="{% url article_detail paragraph.article.pk %}" -->
-	  <a data_toggle="model" href="{% url article_detail paragraph.article.pk %}" data-target="#modal" class="article">{{paragraph.article.headline}}</a>
-	  
+	  {% if paragraph.article %}
+	  <a  href="{% url article_detail paragraph.article.pk %}" class="article">{{paragraph.article.headline}}</a>
 	  <div id="myModal" class="modal hide fade" data-remote="{% url article_detail paragraph.article.pk %}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	    <div class="modal-header">
 	      <h3>{{paragraph.article.headline}}</h3>
@@ -27,7 +26,7 @@
 	      <div class="close_article"><a>Close</a></div>
 	    </div>
 	  </div>
-	
+	{% endif %}
 	</div>
       </div>
    </div>

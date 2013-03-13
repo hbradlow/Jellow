@@ -1,0 +1,36 @@
+[2013-03-12 00:50:40,745][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: stopping ...
+[2013-03-12 00:50:41,174][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: stopped
+[2013-03-12 00:50:41,174][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: closing ...
+[2013-03-12 00:50:41,245][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: closed
+[2013-03-12 01:00:47,568][INFO ][node                     ] [Thin Man] {0.20.2}[297]: initializing ...
+[2013-03-12 01:00:47,578][INFO ][plugins                  ] [Thin Man] loaded [], sites []
+[2013-03-12 01:00:52,547][INFO ][node                     ] [Thin Man] {0.20.2}[297]: initialized
+[2013-03-12 01:00:52,547][INFO ][node                     ] [Thin Man] {0.20.2}[297]: starting ...
+[2013-03-12 01:00:52,732][INFO ][transport                ] [Thin Man] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-03-12 01:00:55,929][INFO ][cluster.service          ] [Thin Man] new_master [Thin Man][cmlvstevTZ-lnXDYkgv1bw][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-03-12 01:00:56,029][INFO ][discovery                ] [Thin Man] Jellow/cmlvstevTZ-lnXDYkgv1bw
+[2013-03-12 01:00:56,077][INFO ][http                     ] [Thin Man] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-03-12 01:00:56,077][INFO ][node                     ] [Thin Man] {0.20.2}[297]: started
+[2013-03-12 01:00:58,695][INFO ][gateway                  ] [Thin Man] recovered [1] indices into cluster_state
+[2013-03-12 20:45:38,542][INFO ][node                     ] [Thin Man] {0.20.2}[297]: stopping ...
+[2013-03-12 20:45:38,821][INFO ][node                     ] [Thin Man] {0.20.2}[297]: stopped
+[2013-03-12 20:45:38,821][INFO ][node                     ] [Thin Man] {0.20.2}[297]: closing ...
+[2013-03-12 20:45:38,890][INFO ][node                     ] [Thin Man] {0.20.2}[297]: closed
+[2013-03-12 21:18:10,287][INFO ][node                     ] [Grim Reaper] {0.20.2}[5209]: initializing ...
+[2013-03-12 21:18:10,296][INFO ][plugins                  ] [Grim Reaper] loaded [], sites []
+[2013-03-12 21:18:15,272][INFO ][node                     ] [Grim Reaper] {0.20.2}[5209]: initialized
+[2013-03-12 21:18:15,273][INFO ][node                     ] [Grim Reaper] {0.20.2}[5209]: starting ...
+[2013-03-12 21:18:15,484][INFO ][transport                ] [Grim Reaper] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-03-12 21:18:18,649][INFO ][cluster.service          ] [Grim Reaper] new_master [Grim Reaper][nKqr3fRyRQ2OLMR3sucmsg][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-03-12 21:18:18,738][INFO ][discovery                ] [Grim Reaper] Jellow/nKqr3fRyRQ2OLMR3sucmsg
+[2013-03-12 21:18:18,786][INFO ][http                     ] [Grim Reaper] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-03-12 21:18:18,786][INFO ][node                     ] [Grim Reaper] {0.20.2}[5209]: started
+[2013-03-12 21:18:19,984][INFO ][gateway                  ] [Grim Reaper] recovered [1] indices into cluster_state
+[2013-03-12 21:21:04,451][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] deleting index
+[2013-03-12 21:21:04,618][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] creating index, cause [api], shards [5]/[1], mappings []
+[2013-03-12 21:21:04,753][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] create_mapping [modelresult]
+[2013-03-12 21:21:07,844][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] update_mapping [modelresult] (dynamic)
+[2013-03-12 21:29:28,021][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] deleting index
+[2013-03-12 21:29:28,148][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] creating index, cause [api], shards [5]/[1], mappings []
+[2013-03-12 21:29:28,278][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] create_mapping [modelresult]
+[2013-03-12 21:29:30,934][INFO ][cluster.metadata         ] [Grim Reaper] [haystack] update_mapping [modelresult] (dynamic)

@@ -1,0 +1,14 @@
+[2013-03-12 00:50:40,745][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: stopping ...
+[2013-03-12 00:50:41,174][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: stopped
+[2013-03-12 00:50:41,174][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: closing ...
+[2013-03-12 00:50:41,245][INFO ][node                     ] [Scrambler] {0.20.2}[3489]: closed
+[2013-03-12 01:00:47,568][INFO ][node                     ] [Thin Man] {0.20.2}[297]: initializing ...
+[2013-03-12 01:00:47,578][INFO ][plugins                  ] [Thin Man] loaded [], sites []
+[2013-03-12 01:00:52,547][INFO ][node                     ] [Thin Man] {0.20.2}[297]: initialized
+[2013-03-12 01:00:52,547][INFO ][node                     ] [Thin Man] {0.20.2}[297]: starting ...
+[2013-03-12 01:00:52,732][INFO ][transport                ] [Thin Man] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2013-03-12 01:00:55,929][INFO ][cluster.service          ] [Thin Man] new_master [Thin Man][cmlvstevTZ-lnXDYkgv1bw][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2013-03-12 01:00:56,029][INFO ][discovery                ] [Thin Man] Jellow/cmlvstevTZ-lnXDYkgv1bw
+[2013-03-12 01:00:56,077][INFO ][http                     ] [Thin Man] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2013-03-12 01:00:56,077][INFO ][node                     ] [Thin Man] {0.20.2}[297]: started
+[2013-03-12 01:00:58,695][INFO ][gateway                  ] [Thin Man] recovered [1] indices into cluster_state
